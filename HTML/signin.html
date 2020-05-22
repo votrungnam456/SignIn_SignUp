@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/signin.css">
+    <script src="../JS/signin.js" defer></script>
 </head>
 <body>
-    <h1>Xin chao moi nguoi</h1>
+    <div class="container">
+            <h1>Đăng nhập</h1>
+        <div class="login-form">
+            <form id="form-login" action="#">
+
+                <div class="form-group">
+                    <label for="user">Tên tài khoản:</label><br>
+                    <input type="text" id="txtUser" name="user" placeholder="Tài khoản" required><br>
+                </div>
+                <div class="form-group"></div>
+                    <label for="pwd">Mật khẩu:</label><br>
+                    <input type="password" id="txtPwd" name="pwd" placeholder="Mật khẩu" required><br>
+                </div>
+                <div class="submit-g">
+                     <input id="btn-submit" type="submit" value="Đăng nhập">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
