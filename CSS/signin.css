@@ -13,8 +13,8 @@ main {
 #btn-submit{
     margin-left: 70%;
 }
-.form-group{
-    margin-left: 10%;
+.form-group,#sign-up{
+    margin-left: 5%;
 }
 .login-form{
     width: 50%;
