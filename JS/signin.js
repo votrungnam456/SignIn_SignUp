@@ -5,16 +5,22 @@ var users =[
     {
         username :"VoTrungNam",
         password : "123"
+    },
+    {
+        username:"votrungnghia",
+        password:"456"
     }
 ]
 submit.addEventListener('click',()=>{
-
-    if(name===username.value&&pass===password.value){
-        alert("Dang nhap thanh cong")
-    }
-    else{
-        alert("Sai tai khoan hoac mat khau")
-        username.value="";
-        password.value="";
+    let check = false;
+    users.forEach(user => {
+        if(username.value === user.username && password.value === user.password){
+            window.open('home.html')
+            check=true;
+        }
+    });
+    if(check==false)
+    {
+        alert("No!!")
     }
 })
