@@ -1,6 +1,7 @@
 let submit = document.getElementById("btn-submit")
 let username = document.getElementById("txtUser");
 let password = document.getElementById("txtPwd");
+let checkwrg = document.getElementById("form-login")
 var users =[
     {
         username :"VoTrungNam",
@@ -21,6 +22,10 @@ submit.addEventListener('click',()=>{
     });
     if(check==false)
     {
-        alert("No!!")
+        
+        let para = document.createElement("p");
+        let node = document.createTextNode("Sai tài khoản hoặc mật khẩu");
+        para.appendChild(node);
+        checkwrg.appendChild(para);
     }
 })
