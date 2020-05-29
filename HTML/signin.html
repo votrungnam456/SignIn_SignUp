@@ -16,26 +16,28 @@
     <div class="container">
             <h1>Đăng nhập</h1>
         <div class="login-form">
-            <form id="form-login" action="#">
+            <form id="form-login" action="#" >
 
                 <div class="form-group">
                     <label for="user">Tên tài khoản:</label><br>
-                    <input type="text" id="txtUser" name="user" placeholder="Tài khoản" required><br>
+                    <input type="text" id="txtUser" placeholder="Tài khoản" required><br>
                 </div>
                 <div class="form-group">
                     <label for="pwd">Mật khẩu:</label><br>
-                    <input type="password" id="txtPwd" name="pwd" placeholder="Mật khẩu" required><br>   
+                    <input type="password" id="txtPwd"  placeholder="Mật khẩu" required><br>   
                 </div>
-                <div>
-                    <a id="sign-up" href="#">Đăng ký</a>
-                </div>
+                <span id="err"></span>
                 <div class="submit-g">
                      <input id="btn-submit" type="submit" value="Đăng nhập">
                 </div>
-
+                <div class="line"></div>
+                <div class="sign-up-btn">
+                    <p id="sign-up">Bạn chưa có tài khoản? |<a href="#" target="">Đăng ký</a> ngay</p>
+                </div>
             </form>
         </div>
     </div>
+    </main>
     <footer>
 
     </footer>

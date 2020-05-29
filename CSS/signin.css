@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 header{
     background-color: #cccccc;
     min-height: 70px;
@@ -7,14 +11,30 @@ header{
 
 main {
     background-color: #dddddd;
-    min-height: 300px;
+    min-height: 500px;
     padding: 7.5px 15px;
 }
 #btn-submit{
-    margin-left: 70%;
+    min-width: 350px;
+    margin-left:5%;
+    margin-top:5%;
+    /* margin-left: 70%; */
 }
 .form-group,#sign-up{
     margin-left: 5%;
+}
+.sign-up-btn{
+    margin-top:5%;
+    margin-left:10%;
+}
+.line{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-right: 10%;
+    border-top:1px solid gray;
+}
+a{
+    list-style-type: none;
 }
 .login-form{
     width: 50%;
@@ -29,6 +49,14 @@ input[type=text],input[type=password]{
     display: inline-block;
     box-sizing: border-box;
     margin: 8px 0;
+    min-width: 350px;
+}
+#err{
+    display:none;
+    color: red;
+    margin-left:5%;
+    padding-top: 5%;
+    
 }
 input[type=text]:focus,input[type=password]:focus {
     background-color: lightblue;
