@@ -11,17 +11,22 @@ header{
 
 main {
     background-color: #dddddd;
-    min-height: 500px;
+    min-height: 650px;
     padding: 7.5px 15px;
+    background-image: url("../img/laptop.jpg");
+    background-repeat: no-repeat;
+    background-size:100%;
+
 }
 #btn-submit{
     min-width: 350px;
     margin-left:5%;
     margin-top:5%;
-    /* margin-left: 70%; */
+    min-height: 30px;
 }
 .form-group,#sign-up{
     margin-left: 5%;
+    color:white;
 }
 .sign-up-btn{
     margin-top:5%;
@@ -40,7 +45,8 @@ a{
     width: 50%;
     max-width: 400px;
     margin: 20px auto;
-    background-color: #ffffff;
+    background-color: black;
+    opacity: 0.75;
     padding: 15px;
     border: 2px dotted #cccccc;
     border-radius: 10px;
@@ -48,8 +54,11 @@ a{
 input[type=text],input[type=password]{
     display: inline-block;
     box-sizing: border-box;
-    margin: 8px 0;
+    margin: 10px 0;
     min-width: 350px;
+    min-height: 30px;
+    border: 1px solid green;
+    opacity: 0.5;
 }
 #err{
     display:none;
@@ -64,10 +73,12 @@ input[type=text]:focus,input[type=password]:focus {
 .container {
     width: 780px;
     max-width: 1200px;
-    margin: auto auto;
+    margin: 80px auto;
 }
 h1{
-    text-align: center
+    text-align: center;
+    color:white;
+    margin-bottom: 5%;
 }
 
 footer{
