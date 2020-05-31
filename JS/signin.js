@@ -25,9 +25,5 @@ submit.addEventListener('click',async ()=>{
     if(check==false)
     {
         error.style.display="block";
-        // let para = document.createElement("p");
-        // let node = document.createTextNode("Sai tài khoản hoặc mật khẩu");
-        // para.appendChild(node);
-        // checkwrg.appendChild(para);
     }
 })
