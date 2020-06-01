@@ -16,12 +16,17 @@ main {
     border: 2px solid green;
     margin-bottom: 10px;
 }
-.account p{
+.account  p{
     margin:-10px 0px 10px 10px;
     width: 17%;
     background: black;
     color: green;
     text-align: center;
+}
+.form-gender p{
+    color: white ;
+    margin-left:-10px;
+    display: flex;
 }
 .container {
     width: 780px;

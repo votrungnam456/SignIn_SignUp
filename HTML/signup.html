@@ -23,15 +23,26 @@
                 <p>Thông tin cá nhân</p>
                 <div class="form-group">
                     <label for="first-name">Họ:</label><br>
-                    <input type="text" id="txtUser" name="first-name" placeholder="Họ" required><br>
+                    <input type="text" id="first-name" name="first-name" placeholder="Họ" required><br>
                 </div>
                 <div class="form-group">
                     <label for="middle-last-name">Tên lót và tên:</label><br>
-                    <input type="text" id="txtPwd" name="middle-last-name" placeholder="Tên lót và tên" required><br>   
+                    <input type="text" id="middle-last-name" name="middle-last-name" placeholder="Tên lót và tên" required><br>   
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label><br>
-                    <input type="text" id="txtPwd" name="email" placeholder="example@google.com" required><br>   
+                    <input type="text" id="email" name="email" placeholder="example@google.com" required><br>   
+                </div>
+                <div class="form-group">
+                    <form id="form-gender" action="/action_page.php">
+                        <span>Giới tính:</span>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Nam</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Nữ</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Khác</label>
+                    </form>
                 </div>
             </div>
             <div class="account">
