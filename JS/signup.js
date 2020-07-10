@@ -1,53 +1,45 @@
-
-// btnSubmit.addEventListener('click', ()=>{
-//    
-// })
-
 // check firebase
 
 // window.onload = () => {
 //     console.log(firebase.app().name);
 //     view.setActiveScreen('register');
 //   }
-
-
-
+//-------------------------------------------------------------------------------------------
 let btnSubmit = document.getElementById("btn-submit")
 btnSubmit.addEventListener('click', async ()=>{
-    let pwd = document.getElementById('txtPwd')
-    let agPwd = document.getElementById('txtAgPwd')
-    let error = document.getElementById("err")
-    let FName = document.getElementById('first-name')
-    let MLName = document.getElementById('middle-last-name')
-    let email = document.getElementById('email')
-    let user = document.getElementById('txtUser')
-    let genders = document.getElementsByName('gender')
-    let gender
-    for (var i = 0, length = genders.length; i < length; i++) {
-        if (genders[i].checked) {
-          gender = genders[i];
-          break;
-        }
-    }
-    // if(pwd.value!= agPwd.value){
-    //             error.innerHTML = "<span>Mật khẩu và nhập lại mật khẩu không khớp nhau !!<span>";
-    //         }
-    if (pwd.value === agPwd.value) {
-        try {
-          await firebase.auth().createUserWithEmailAndPassword(email.value, pwd.value);
-    
-          firebase.auth().currentUser.updateProfile({
-            displayName: `${FName.value} ${MLName.value}`,
-            // genderUser:`${gender.value}`, 
-            // userNameUser: `${user.value}`,
-          })
-    
-          firebase.auth().currentUser.sendEmailVerification();
-          //view.setMessage('form-success', 'Register success');
-        } catch (error) {
-          //view.setMessage('form-error', error.message)
-          console.log(error)
-        }
+  let  error = document.getElementById("err").value
+  let genderUser 
+  let  confirmPwd = document.getElementById('txtAgPwd').value
+  let newUser={
+    pwd : document.getElementById('txtPwd').value,
+    displayName: document.getElementById('first-name').value+" "+document.getElementById('middle-last-name').value,
+    email : document.getElementById('email').value,
+  }
+  let genders = document.getElementsByName('gender')
+
+  for (var i = 0, length = genders.length; i < length; i++) {
+      if (genders[i].checked) {
+        genderUser = genders[i];
+        break;
       }
-      
+  }   
+  newUser.gender = genderUser
+  if (newUser.displayName && newUser.email&&newUser.gender&&newUser.pwd === confirmPwd) {
+      try {
+        await firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.pwd);  
+        firebase.auth().currentUser.updateProfile({
+          newUser
+        }) 
+        firebase.auth().currentUser.sendEmailVerification();
+        alert("Done!!")
+        window.open('signin.html','_self')
+      } catch (error) {
+        error.innerHTML = "<p>Tài khoản đã tồn tại</p>";
+        error.style.display="block";
+      }
+    }
+  else{
+    error.innerHTML = "<p>Tài khoản hoặc mật khẩu không được để trống</p>";
+    error.style.display="block";
+  }  
 })
