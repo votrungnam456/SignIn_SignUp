@@ -12,22 +12,26 @@ header{
 
 
 @media screen and (min-width:300px) and (max-width:500px){
+    body{
+        height: 500px;
+        overflow-x:hidden 
+    }
     main {
+        height: 900px;
+
         background-color: #dddddd;
-        min-width: 500px;
-        min-height: 800px;
+
         padding: 7.5px 15px;
         background-image: url("../img/backgroundMobile.jpg");
-        /* background-repeat: no-repeat; */
-        background-size:100%;
-        
+        background-repeat: no-repeat;
+        background-size:500px 800px;
     }
     .container {
         /* width: 400px; */
         min-width: 100%;
         /* margin: 80px auto; */
         margin-top: 50%;
-        padding: 5%;
+        /* padding: 5%; */
     }
     .login-form{
         /* width: 50%; */
@@ -40,10 +44,31 @@ header{
         border-radius: 10px;
     }
 }
-@media screen and (min-width:500px){
+@media screen and (min-width:501px) and (max-width:1199px){
+    body{
+        height: 1400px;
+        overflow-x:hidden 
+    }
+    main {
+        height: 1400px;
+
+        background-color: #dddddd;
+
+        padding: 7.5px 15px;
+        background-image: url("../img/backgroundMobile.jpg");
+        background-repeat: no-repeat;
+        background-size:1200px 1400px;
+    }
+    .container {
+        /* width: 400px; */
+        min-width: 100%;
+        /* margin: 80px auto; */
+        margin-top: 50%;
+        /* padding: 5%; */
+    }
     .login-form{
-        width: 50%;
-        max-width: 400px;
+        /* width: 100%; */
+        max-width: 60%;
         margin: 20px auto;
         background-color: black;
         opacity: 0.75;
@@ -53,9 +78,13 @@ header{
     }
 } 
 @media screen and (min-width:1200px){
+    body{
+        height: 1200px;
+        overflow: hidden;
+    }
     main {
         background-color: #dddddd;
-
+        height: 1200px;
         padding: 7.5px 15px;
         background-image: url("../img/laptop.jpg");
         background-repeat: no-repeat;
