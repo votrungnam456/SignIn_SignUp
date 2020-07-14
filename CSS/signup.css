@@ -2,7 +2,31 @@
     margin:0;
     padding: 0;
 }
-
+@media screen and (min-width:300px) and (max-width:500px){
+    main {
+        background-color: #dddddd;
+        min-height: 1000px;
+        padding: 7.5px 15px;
+        background-image: url("../img/signup.jpg");
+        background-repeat: no-repeat;
+        background-size:100%;
+    }
+    .container {
+        width: 780px;
+        max-width: 1200px;
+        margin: 80px auto;
+    }
+    .sign-up-form{
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: black;
+        opacity: 0.9;
+        padding: 15px;
+        border: 2px dotted #cccccc;
+        border-radius: 10px;
+    }
+}
 main {
     background-color: #dddddd;
     min-height: 1000px;
